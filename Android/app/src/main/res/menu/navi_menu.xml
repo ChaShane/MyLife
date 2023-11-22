@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/first"
+        app:showAsAction="ifRoom"
+        android:enabled="true"
+        android:title="날씨 및 뉴스" />
+    <item
+        android:id="@+id/second"
+        app:showAsAction="ifRoom"
+        android:title="서울역 탑승수" />
+    <item
+        android:id="@+id/third"
+        app:showAsAction="ifRoom"
+        android:enabled="true"
+        android:title="부동산" />
+</menu>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#ffffff"
+    tools:context=".Home">
+
+    <!-- 상단 영역: 가운데 정렬 -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <!-- 날씨 이미지 (왼쪽) -->
+        <ImageView
+            android:id="@+id/weatherImageView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/sunny"
+            tools:ignore="MissingConstraints" />
+
+        <!-- 도시명 (오른쪽 상단) -->
+
+        <!-- 날씨 상태 (오른쪽 중앙) -->
+
+        <!-- 온도 (오른쪽 하단) -->
+
+        <TextView
+            android:id="@+id/cityNameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="168dp"
+            android:gravity="left"
+            android:text="City Name"
+            android:textSize="24sp"
+            app:layout_constraintStart_toEndOf="@+id/weatherImageView"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/weatherStatusTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="208dp"
+            android:gravity="left"
+            android:text="Status"
+            android:textSize="24sp"
+            app:layout_constraintStart_toEndOf="@+id/weatherImageView"
+            app:layout_constraintTop_toBottomOf="@+id/cityNameTextView" />
+
+        <TextView
+            android:id="@+id/temperatureTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="176dp"
+            android:gravity="left"
+            android:text="Temperature"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/weatherImageView"
+            app:layout_constraintTop_toBottomOf="@+id/weatherStatusTextView" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- 뉴스 헤드라인 RecyclerView (가운데 아래) -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/newsHeadlineRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>
